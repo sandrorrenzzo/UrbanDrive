@@ -1,0 +1,45 @@
+Execução do menu de console, Sprint 1 (31/10/2026 23:06)
+Entradas: listar vazio, cadastro válido, placa vazia, diária negativa, diária não numérica, listar, sair
+
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: Nenhum veículo cadastrado.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Veículo cadastrado: #1 | ABC1D23 | Onix | Diária: R$ 150,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Erro: A placa não pode ser nula ou vazia.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Erro: O valor da diária deve ser maior que zero.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Erro: o valor da diária deve ser um número.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: #1 | ABC1D23 | Onix | Diária: R$ 150,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+0 - Sair
+Opção: 

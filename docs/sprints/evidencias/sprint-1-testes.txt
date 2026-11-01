@@ -1,0 +1,18 @@
+Saída do dotnet test, Sprint 1 (31/10/2026 23:05)
+
+  Aprovado UrbanDrive.Tests.VeiculoServiceTests.Cadastrar_ComPlacaVazia_NaoAdicionaNaLista [7 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComIdInvalido_LancaExcecao(id: 0) [5 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComIdInvalido_LancaExcecao(id: -1) [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComValorDiariaInvalido_LancaExcecao(valor: -10) [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComValorDiariaInvalido_LancaExcecao(valor: 0) [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Placa_AlteradaParaVazia_LancaExcecaoEMantemValorAnterior [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComPlacaVazia_LancaExcecao(placa: "") [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComPlacaVazia_LancaExcecao(placa: "   ") [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComModeloVazio_LancaExcecao(modelo: "") [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComModeloVazio_LancaExcecao(modelo: null) [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoServiceTests.Cadastrar_ComDadosValidos_AdicionaNaListaComIdSequencial [2 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComDadosValidos_CriaVeiculo [1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.Construtor_ComPlacaNula_LancaExcecao [< 1 ms]
+  Aprovado UrbanDrive.Tests.VeiculoTests.ValorDiaria_AlteradoParaNegativo_LancaExcecaoEMantemValorAnterior [< 1 ms]
+Total de testes: 14
+     Aprovados: 14
