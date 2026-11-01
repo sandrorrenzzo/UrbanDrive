@@ -185,9 +185,9 @@ Unidade utilizada nas estimativas: horas.
 
 **T09**
 - **Item ou tarefa:** T09, resultado e retrospectiva
-- **Situação:** parcialmente concluído
+- **Situação:** concluído
 - **Evidência:** este documento
-- **Observações:** seção G preenchida; seção H aguardando.
+- **Observações:** nenhuma.
 
 **Pendências para a Sprint 2**
 - As issues #1, #2 e #3 não foram fechadas automaticamente pelos PRs, porque as descrições não tinham `Closes #N`. Foram fechadas manualmente.
@@ -195,12 +195,16 @@ Unidade utilizada nas estimativas: horas.
 
 ## H. Retrospectiva
 
-A preencher ao fim da sprint.
-
 **O que funcionou bem?**
+Separar a solution em Models, Services, App e Tests logo no começo. O `Program.cs` ficou só com o menu e as validações do `Veiculo` puderam ser testadas sem rodar o programa. Também ajudou fazer um PR por item do backlog, com commits pequenos para cada tarefa.
 
 **Quais foram as principais dificuldades?**
+O trabalho ficou concentrado no fim do prazo: o planejamento só foi registrado no último dia da sprint (31/10), junto com o código. Também foi preciso refazer a solution, porque o Visual Studio criou um único projeto console. Por fim, os PRs foram abertos sem `Closes #N` e as issues tiveram que ser fechadas manualmente.
 
 **O planejamento foi adequado ao esforço necessário?**
+Em escopo, sim: todos os itens selecionados (PB01, PB02 e PB03) foram concluídos. As estimativas foram revistas antes de começar, de 34 h para 17,5 h no backlog, por estarem altas para o tamanho dos itens. O tempo real de cada tarefa não foi anotado, então não dá para comparar com as 4,5 h planejadas.
 
 **O que deverá ser melhorado na próxima sprint?**
+- Registrar o planejamento no início da sprint, antes de começar o código.
+- Colocar `Closes #N` na descrição de cada PR para fechar a issue automaticamente.
+- Anotar o tempo real gasto em cada tarefa para comparar com a estimativa.
