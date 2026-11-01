@@ -1,3 +1,10 @@
 <Solution>
-  <Project Path="UrbanDrive/UrbanDrive.csproj" />
+  <Folder Name="/src/">
+    <Project Path="src/UrbanDrive.App/UrbanDrive.App.csproj" />
+    <Project Path="src/UrbanDrive.Models/UrbanDrive.Models.csproj" />
+    <Project Path="src/UrbanDrive.Services/UrbanDrive.Services.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UrbanDrive.Tests/UrbanDrive.Tests.csproj" />
+  </Folder>
 </Solution>
