@@ -1,44 +1,151 @@
-# Product Backlog — UrbanDrive
+# Product Backlog UrbanDrive
 
 Backlog montado a partir dos requisitos funcionais RF01 a RF10 do enunciado.
 Cada item também existe como issue no GitHub e está no quadro [UrbanDrive](https://github.com/users/sandrorrenzzo/projects/1).
 
 ## Critérios
 
-- **Divisão dos itens:** cada item gera algo que pode ser testado ou demonstrado sozinho. Requisitos que envolvem conceitos de sprints diferentes foram separados (ex.: RF05 virou PB07, associação, e PB09, polimorfismo).
-- **Prioridade:**
-  - **Alta:** desbloqueia outros itens ou torna a sprint demonstrável.
-  - **Média:** exigido, mas nenhum outro item depende dele.
-  - **Baixa:** só pode ser feito no fim.
-- **Sprint:** segue a ordem dos conteúdos de POO do enunciado (encapsulamento → relacionamentos → herança → interfaces) e as dependências entre os itens.
-- **Estimativa:** em horas, unidade usada em todas as sprints.
+**Divisão dos itens:** cada item gera algo que pode ser testado ou demonstrado sozinho. Requisitos que envolvem conceitos de sprints diferentes foram separados. Exemplo: o RF05 virou PB07 (associação) e PB09 (polimorfismo).
 
-Diagramas, evidências de testes e documentos de cada sprint não são itens separados: entram como tarefas no planejamento de cada sprint.
+**Prioridade:**
+- Alta: desbloqueia outros itens ou torna a sprint demonstrável.
+- Média: exigido, mas nenhum outro item depende dele.
+- Baixa: só pode ser feito no fim.
 
-## Itens
+**Sprint:** segue a ordem dos conteúdos de POO do enunciado (encapsulamento, relacionamentos, herança, interfaces) e as dependências entre os itens.
 
-| ID | Issue | Item | RF | Depende de | Prioridade | Sprint | Estimativa (h) | Situação |
-|---|---|---|---|---|---|---|---|---|
-| PB01 | #1 | Estrutura da solution (Models, Services, App, Tests) | — | — | Alta | 1 | 1 | A fazer |
-| PB02 | #2 | `Veiculo` encapsulada com validações | RF01 | PB01 | Alta | 1 | 3 | A fazer |
-| PB03 | #3 | Menu de console para cadastrar e listar veículos | RF10 | PB02 | Alta | 1 | 2 | A fazer |
-| PB04 | #4 | `Motorista` com `CNH` (composição) | RF03 | PB02 | Alta | 2 | 3 | A fazer |
-| PB05 | #5 | `Frota` com lista de veículos (agregação) | RF04 | PB02 | Alta | 2 | 2 | A fazer |
-| PB06 | #6 | `ConfiguradorSistema` com membros estáticos | RF07 | PB02 | Média | 2 | 2 | A fazer |
-| PB07 | #7 | `Locacao` ligando `Motorista` e `Veiculo` (associação) | RF05 | PB04 | Média | 2 | 2 | A fazer |
-| PB08 | #8 | `Carro` e `Patinete` (`sealed`) herdando de `Veiculo` | RF02 | PB02 | Alta | 3 | 3 | A fazer |
-| PB09 | #9 | `CalcularAluguel(int dias)` com cálculo por tipo | RF05 | PB06, PB08 | Alta | 3 | 3 | A fazer |
-| PB10 | #10 | `RealizarManutencao()` e `RealizarManutencao(string)` | RF06 | PB02 | Média | 3 | 1 | A fazer |
-| PB11 | #11 | `Veiculo` abstrata | RF02 | PB08 | Média | 4 | 1 | A fazer |
-| PB12 | #12 | `IImprimivel` com `GerarRelatorio()` | RF08 | PB04, PB05, PB08 | Média | 4 | 2 | A fazer |
-| PB13 | #13 | `IEletrico` com `Recarregar()` em `Patinete` e `CarroEletrico` | RF09 | PB08 | Média | 4 | 3 | A fazer |
-| PB14 | #14 | Menu final integrado | RF10 | PB03 a PB13 | Alta | 4 | 3 | A fazer |
-| PB15 | #15 | README de execução e relatório final | — | PB14 | Baixa | 4 | 3 | A fazer |
+**Estimativa:** em horas, unidade usada em todas as sprints.
 
-**Total por sprint:** Sprint 1: 6 h · Sprint 2: 9 h · Sprint 3: 7 h · Sprint 4: 12 h
+Diagramas, evidências de testes e documentos de cada sprint não são itens separados. Eles entram como tarefas no planejamento de cada sprint.
+
+## Sprint 1 (total: 6 h)
+
+**PB01: Estrutura da solution (Models, Services, App, Tests)**
+- Issue: #1
+- Requisito: nenhum (item técnico)
+- Depende de: nenhum
+- Prioridade: Alta
+- Estimativa: 1 h
+- Situação: A fazer
+
+**PB02: `Veiculo` encapsulada com validações**
+- Issue: #2
+- Requisito: RF01
+- Depende de: PB01
+- Prioridade: Alta
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB03: Menu de console para cadastrar e listar veículos**
+- Issue: #3
+- Requisito: RF10
+- Depende de: PB02
+- Prioridade: Alta
+- Estimativa: 2 h
+- Situação: A fazer
+
+## Sprint 2 (total: 9 h)
+
+**PB04: `Motorista` com `CNH` (composição)**
+- Issue: #4
+- Requisito: RF03
+- Depende de: PB02
+- Prioridade: Alta
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB05: `Frota` com lista de veículos (agregação)**
+- Issue: #5
+- Requisito: RF04
+- Depende de: PB02
+- Prioridade: Alta
+- Estimativa: 2 h
+- Situação: A fazer
+
+**PB06: `ConfiguradorSistema` com membros estáticos**
+- Issue: #6
+- Requisito: RF07
+- Depende de: PB02
+- Prioridade: Média
+- Estimativa: 2 h
+- Situação: A fazer
+
+**PB07: `Locacao` ligando `Motorista` e `Veiculo` (associação)**
+- Issue: #7
+- Requisito: RF05
+- Depende de: PB04
+- Prioridade: Média
+- Estimativa: 2 h
+- Situação: A fazer
+
+## Sprint 3 (total: 7 h)
+
+**PB08: `Carro` e `Patinete` (`sealed`) herdando de `Veiculo`**
+- Issue: #8
+- Requisito: RF02
+- Depende de: PB02
+- Prioridade: Alta
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB09: `CalcularAluguel(int dias)` com cálculo por tipo**
+- Issue: #9
+- Requisito: RF05
+- Depende de: PB06, PB08
+- Prioridade: Alta
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB10: `RealizarManutencao()` e `RealizarManutencao(string)`**
+- Issue: #10
+- Requisito: RF06
+- Depende de: PB02
+- Prioridade: Média
+- Estimativa: 1 h
+- Situação: A fazer
+
+## Sprint 4 (total: 12 h)
+
+**PB11: `Veiculo` abstrata**
+- Issue: #11
+- Requisito: RF02
+- Depende de: PB08
+- Prioridade: Média
+- Estimativa: 1 h
+- Situação: A fazer
+
+**PB12: `IImprimivel` com `GerarRelatorio()`**
+- Issue: #12
+- Requisito: RF08
+- Depende de: PB04, PB05, PB08
+- Prioridade: Média
+- Estimativa: 2 h
+- Situação: A fazer
+
+**PB13: `IEletrico` com `Recarregar()` em `Patinete` e `CarroEletrico`**
+- Issue: #13
+- Requisito: RF09
+- Depende de: PB08
+- Prioridade: Média
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB14: Menu final integrado**
+- Issue: #14
+- Requisito: RF10
+- Depende de: PB03 a PB13
+- Prioridade: Alta
+- Estimativa: 3 h
+- Situação: A fazer
+
+**PB15: README de execução e relatório final**
+- Issue: #15
+- Requisito: nenhum (item de documentação)
+- Depende de: PB14
+- Prioridade: Baixa
+- Estimativa: 3 h
+- Situação: A fazer
 
 ## Histórico de alterações
 
-| Data | Alteração |
-|---|---|
-| 31/10/2026 | Criação do backlog inicial. |
+- 31/10/2026: criação do backlog inicial.
