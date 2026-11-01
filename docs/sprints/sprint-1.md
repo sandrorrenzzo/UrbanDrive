@@ -135,21 +135,76 @@ Unidade utilizada nas estimativas: horas.
 
 ## G. Resultado da sprint
 
-A preencher ao fim da sprint. Para cada item ou tarefa:
+**T01**
+- **Item ou tarefa:** T01, criar os projetos e ligar as referências (PB01)
+- **Situação:** concluído
+- **Evidência:** PR #18, commit `6b77c8d`
+- **Observações:** o projeto console criado pelo Visual Studio foi substituído pelos quatro projetos.
 
-- **Item ou tarefa:**
-- **Situação:** (concluído, parcialmente concluído ou não concluído)
-- **Evidência:**
-- **Observações:**
+**T02**
+- **Item ou tarefa:** T02, classe `Veiculo` com campos privados, propriedades públicas e construtor (PB02)
+- **Situação:** concluído
+- **Evidência:** PR #19, commit `e998b52`
+- **Observações:** nenhuma.
+
+**T03**
+- **Item ou tarefa:** T03, validações de Id, Placa, Modelo e ValorDiaria (PB02)
+- **Situação:** concluído
+- **Evidência:** PR #19, commit `5103645`
+- **Observações:** além da placa nula ou vazia exigida no enunciado, também foram validados Id, Modelo e ValorDiaria.
+
+**T04**
+- **Item ou tarefa:** T04, testes unitários de `Veiculo` (PB02)
+- **Situação:** concluído
+- **Evidência:** PR #19, commit `cea690b`, `evidencias/sprint-1-testes.txt`
+- **Observações:** 12 casos de teste cobrindo todas as regras da seção E.
+
+**T05**
+- **Item ou tarefa:** T05, serviço de cadastro e listagem (PB03)
+- **Situação:** concluído
+- **Evidência:** PR #20, commit `068d9ec`
+- **Observações:** foram incluídos 2 testes para o serviço, que não estavam previstos no planejamento.
+
+**T06**
+- **Item ou tarefa:** T06, menu de console (PB03)
+- **Situação:** concluído
+- **Evidência:** PR #20, commit `7e45c4d`, `evidencias/sprint-1-execucao-menu.txt`
+- **Observações:** o menu mostra a mensagem de erro e continua rodando quando os dados são inválidos.
+
+**T07**
+- **Item ou tarefa:** T07, evidências
+- **Situação:** concluído
+- **Evidência:** `docs/sprints/evidencias/`
+- **Observações:** 14 testes aprovados, 0 falhas. Evidências salvas em texto.
+
+**T08**
+- **Item ou tarefa:** T08, diagrama de classes inicial
+- **Situação:** concluído
+- **Evidência:** `docs/diagramas/classes-sprint-1.md`
+- **Observações:** diagrama feito em Mermaid, exibido direto no GitHub.
+
+**T09**
+- **Item ou tarefa:** T09, resultado e retrospectiva
+- **Situação:** concluído
+- **Evidência:** este documento
+- **Observações:** nenhuma.
+
+**Pendências para a Sprint 2**
+- As issues #1, #2 e #3 não foram fechadas automaticamente pelos PRs, porque as descrições não tinham `Closes #N`. Foram fechadas manualmente.
+- O Id dos veículos é gerado dentro do `VeiculoService`. Avaliar se essa responsabilidade passa para o `ConfiguradorSistema` (PB06).
 
 ## H. Retrospectiva
 
-A preencher ao fim da sprint.
-
 **O que funcionou bem?**
+Separar a solution em Models, Services, App e Tests logo no começo. O `Program.cs` ficou só com o menu e as validações do `Veiculo` puderam ser testadas sem rodar o programa. Também ajudou fazer um PR por item do backlog, com commits pequenos para cada tarefa.
 
 **Quais foram as principais dificuldades?**
+O trabalho ficou concentrado no fim do prazo: o planejamento só foi registrado no último dia da sprint (31/10), junto com o código. Também foi preciso refazer a solution, porque o Visual Studio criou um único projeto console. Por fim, os PRs foram abertos sem `Closes #N` e as issues tiveram que ser fechadas manualmente.
 
 **O planejamento foi adequado ao esforço necessário?**
+Em escopo, sim: todos os itens selecionados (PB01, PB02 e PB03) foram concluídos. As estimativas foram revistas antes de começar, de 34 h para 17,5 h no backlog, por estarem altas para o tamanho dos itens. O tempo real de cada tarefa não foi anotado, então não dá para comparar com as 4,5 h planejadas.
 
 **O que deverá ser melhorado na próxima sprint?**
+- Registrar o planejamento no início da sprint, antes de começar o código.
+- Colocar `Closes #N` na descrição de cada PR para fechar a issue automaticamente.
+- Anotar o tempo real gasto em cada tarefa para comparar com a estimativa.
