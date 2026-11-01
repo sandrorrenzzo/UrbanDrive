@@ -9,6 +9,9 @@ public class Veiculo
 
     public Veiculo(int id, string placa, string modelo, decimal valorDiaria)
     {
+        if (id <= 0)
+            throw new ArgumentException("O identificador deve ser maior que zero.");
+
         _id = id;
         Placa = placa;
         Modelo = modelo;
@@ -20,19 +23,37 @@ public class Veiculo
     public string Placa
     {
         get => _placa;
-        set => _placa = value;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("A placa não pode ser nula ou vazia.");
+
+            _placa = value.Trim().ToUpperInvariant();
+        }
     }
 
     public string Modelo
     {
         get => _modelo;
-        set => _modelo = value;
+        set
+        {
+            if (string.IsNullOrWhiteSpace(value))
+                throw new ArgumentException("O modelo não pode ser nulo ou vazio.");
+
+            _modelo = value.Trim();
+        }
     }
 
     public decimal ValorDiaria
     {
         get => _valorDiaria;
-        set => _valorDiaria = value;
+        set
+        {
+            if (value <= 0)
+                throw new ArgumentException("O valor da diária deve ser maior que zero.");
+
+            _valorDiaria = value;
+        }
     }
 
     public override string ToString() =>
