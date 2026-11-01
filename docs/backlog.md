@@ -26,7 +26,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: nenhum
 - Prioridade: Alta
 - Estimativa: 0,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB02: `Veiculo` encapsulada com validações**
 - Issue: #2
@@ -34,7 +34,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB01
 - Prioridade: Alta
 - Estimativa: 1,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB03: Menu de console para cadastrar e listar veículos**
 - Issue: #3
@@ -42,7 +42,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB02
 - Prioridade: Alta
 - Estimativa: 1 h
-- Situação: A fazer
+- Situação: Concluído
 
 ## Sprint 2 (total: 4,5 h)
 
@@ -150,3 +150,4 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 
 - 31/10/2026: criação do backlog inicial.
 - 31/10/2026: revisão das estimativas, de 34 h para 17,5 h no total, por considerar as primeiras muito altas para o tamanho de cada item.
+- 31/10/2026: fim da Sprint 1. PB01, PB02 e PB03 concluídos.
