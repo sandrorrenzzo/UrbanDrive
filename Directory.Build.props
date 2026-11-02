@@ -1,0 +1,10 @@
+<Project>
+  <!-- Aplica as regras do .editorconfig também no dotnet build, não só no editor. -->
+  <PropertyGroup>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <!-- Necessário para o build apontar using não utilizado (IDE0005). -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <!-- CS1591: não exigir comentário XML em todo membro público. -->
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+  </PropertyGroup>
+</Project>
