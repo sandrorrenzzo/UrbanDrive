@@ -1,0 +1,15 @@
+{
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "editor.rulers": [120],
+  "files.insertFinalNewline": true,
+  "files.trimTrailingWhitespace": true,
+  "dotnet.defaultSolution": "UrbanDrive.slnx",
+  "dotnet.formatting.organizeImportsOnFormat": true,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.tabSize": 4
+  }
+}

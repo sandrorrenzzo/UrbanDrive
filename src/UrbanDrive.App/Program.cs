@@ -1,4 +1,4 @@
-﻿using System.Globalization;
+using System.Globalization;
 using UrbanDrive.Services;
 
 CultureInfo.CurrentCulture = new CultureInfo("pt-BR");
