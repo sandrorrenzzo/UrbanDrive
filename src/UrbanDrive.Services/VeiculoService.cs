@@ -1,3 +1,4 @@
+using UrbanDrive.Models.Configuracao;
 using UrbanDrive.Models.Entities;
 
 namespace UrbanDrive.Services;
@@ -5,13 +6,12 @@ namespace UrbanDrive.Services;
 public class VeiculoService
 {
     private readonly List<Veiculo> _veiculos = new();
-    private int _proximoId = 1;
 
     public Veiculo Cadastrar(string placa, string modelo, decimal valorDiaria)
     {
-        var veiculo = new Veiculo(_proximoId, placa, modelo, valorDiaria);
+        // O próximo Id vem do contador compartilhado do sistema.
+        var veiculo = new Veiculo(ConfiguradorSistema.TotalVeiculos + 1, placa, modelo, valorDiaria);
         _veiculos.Add(veiculo);
-        _proximoId++;
         return veiculo;
     }
 
