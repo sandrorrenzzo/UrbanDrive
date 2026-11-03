@@ -2,7 +2,7 @@ using UrbanDrive.Models.Configuracao;
 using UrbanDrive.Models.Entities;
 using UrbanDrive.Services;
 
-namespace UrbanDrive.Tests;
+namespace UrbanDrive.Tests.Models.Configuracao;
 
 public class ConfiguradorSistemaTests
 {

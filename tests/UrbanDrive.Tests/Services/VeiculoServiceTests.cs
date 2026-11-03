@@ -1,6 +1,6 @@
 using UrbanDrive.Services;
 
-namespace UrbanDrive.Tests;
+namespace UrbanDrive.Tests.Services;
 
 public class VeiculoServiceTests
 {

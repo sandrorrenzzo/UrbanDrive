@@ -2,7 +2,7 @@ using UrbanDrive.Models.Configuracao;
 using UrbanDrive.Models.Entities;
 using UrbanDrive.Models.Enums;
 
-namespace UrbanDrive.Tests;
+namespace UrbanDrive.Tests.Models.Entities;
 
 public class LocacaoTests
 {
