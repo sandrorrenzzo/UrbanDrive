@@ -1,6 +1,6 @@
 using UrbanDrive.Models.Entities;
 
-namespace UrbanDrive.Tests;
+namespace UrbanDrive.Tests.Models.Entities;
 
 public class VeiculoTests
 {
