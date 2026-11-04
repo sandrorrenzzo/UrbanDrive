@@ -26,6 +26,8 @@ while (true)
     Console.WriteLine("9 - Listar locações");
     Console.WriteLine("10 - Ver configurações");
     Console.WriteLine("11 - Alterar taxa de serviço");
+    Console.WriteLine("12 - Simular aluguel de todos os veículos");
+    Console.WriteLine("13 - Registrar manutenção");
     Console.WriteLine("0 - Sair");
     Console.Write("Opção: ");
 
@@ -66,6 +68,12 @@ while (true)
         case "11":
             AlterarTaxa();
             break;
+        case "12":
+            SimularAluguel();
+            break;
+        case "13":
+            RegistrarManutencao();
+            break;
         case "0":
         case null:
             return;
@@ -77,6 +85,15 @@ while (true)
 
 void CadastrarVeiculo()
 {
+    Console.WriteLine("Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete");
+    Console.Write("Escolha o tipo: ");
+    var tipo = Console.ReadLine();
+    if (tipo is not ("1" or "2" or "3"))
+    {
+        Console.WriteLine("Erro: tipo inválido.");
+        return;
+    }
+
     Console.Write("Placa: ");
     var placa = Console.ReadLine() ?? string.Empty;
 
@@ -90,9 +107,21 @@ void CadastrarVeiculo()
         return;
     }
 
+    var portas = 0;
+    var autonomia = 0;
+    if (tipo == "2" && !LerInteiro("Quantidade de portas: ", out portas))
+        return;
+    if (tipo == "3" && !LerInteiro("Autonomia da bateria (km): ", out autonomia))
+        return;
+
     Executar(() =>
     {
-        var veiculo = veiculoService.Cadastrar(placa, modelo, valorDiaria);
+        Veiculo veiculo = tipo switch
+        {
+            "2" => veiculoService.CadastrarCarro(placa, modelo, valorDiaria, portas),
+            "3" => veiculoService.CadastrarPatinete(placa, modelo, valorDiaria, autonomia),
+            _ => veiculoService.Cadastrar(placa, modelo, valorDiaria),
+        };
         Console.WriteLine($"Veículo cadastrado: {veiculo}");
     });
 }
@@ -199,6 +228,47 @@ void AlterarTaxa()
     {
         ConfiguradorSistema.TaxaServico = percentual / 100;
         Console.WriteLine($"Taxa de serviço alterada para {ConfiguradorSistema.TaxaServico:P0}.");
+    });
+}
+
+// Polimorfismo: a mesma chamada CalcularAluguel usa a regra do tipo real de cada veículo.
+void SimularAluguel()
+{
+    if (!LerInteiro("Quantidade de dias: ", out var dias))
+        return;
+
+    var veiculos = veiculoService.Listar();
+    if (veiculos.Count == 0)
+    {
+        Console.WriteLine("Nenhum veículo cadastrado.");
+        return;
+    }
+
+    Executar(() =>
+    {
+        foreach (var veiculo in veiculos)
+            Console.WriteLine($"{veiculo} => {dias} dia(s): {veiculo.CalcularAluguel(dias):C}");
+    });
+}
+
+void RegistrarManutencao()
+{
+    if (!LerInteiro("Id do veículo: ", out var id))
+        return;
+
+    Console.Write("Peça substituída (deixe vazio para manutenção geral): ");
+    var peca = Console.ReadLine();
+
+    Executar(() =>
+    {
+        var registro = string.IsNullOrWhiteSpace(peca)
+            ? veiculoService.RealizarManutencao(id)
+            : veiculoService.RealizarManutencao(id, peca);
+        Console.WriteLine($"Manutenção registrada: {registro}");
+
+        Console.WriteLine("Histórico do veículo:");
+        foreach (var item in veiculoService.BuscarPorId(id)!.HistoricoManutencoes)
+            Console.WriteLine($"  {item}");
     });
 }
 
