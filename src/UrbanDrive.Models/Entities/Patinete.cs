@@ -3,6 +3,8 @@ namespace UrbanDrive.Models.Entities;
 // sealed: nenhuma classe pode herdar de Patinete.
 public sealed class Patinete : Veiculo
 {
+    private const decimal Desconto = 0.20m;
+
     private readonly int _autonomiaKm;
 
     // A autonomia é validada antes de chamar o construtor de Veiculo,
@@ -14,6 +16,9 @@ public sealed class Patinete : Veiculo
     }
 
     public int AutonomiaKm => _autonomiaKm;
+
+    // Reaproveita a regra comum de Veiculo e aplica o desconto do patinete.
+    public override decimal CalcularAluguel(int dias) => base.CalcularAluguel(dias) * (1 - Desconto);
 
     public override string ToString() => $"{base.ToString()} | Patinete {AutonomiaKm} km de autonomia";
 

@@ -1,5 +1,3 @@
-using UrbanDrive.Models.Configuracao;
-
 namespace UrbanDrive.Models.Entities;
 
 public class Locacao
@@ -27,7 +25,8 @@ public class Locacao
     public Motorista Motorista => _motorista;
     public Veiculo Veiculo => _veiculo;
     public int Dias => _dias;
-    public decimal ValorTotal => _veiculo.ValorDiaria * _dias * (1 + ConfiguradorSistema.TaxaServico);
+    // Polimorfismo: o cálculo usado é o do tipo real do veículo (Carro, Patinete ou Veiculo).
+    public decimal ValorTotal => _veiculo.CalcularAluguel(_dias);
 
     public override string ToString() =>
         $"{Motorista.Nome} alugou {Veiculo.Placa} ({Veiculo.Modelo}) por {Dias} dia(s) | Total: {ValorTotal:C}";
