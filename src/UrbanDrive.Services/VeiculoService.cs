@@ -8,9 +8,6 @@ public class VeiculoService
     private readonly List<Veiculo> _veiculos = new();
 
     // O próximo Id vem do contador compartilhado do sistema.
-    public Veiculo Cadastrar(string placa, string modelo, decimal valorDiaria) =>
-        Adicionar(new Veiculo(ProximoId(), placa, modelo, valorDiaria));
-
     public Carro CadastrarCarro(string placa, string modelo, decimal valorDiaria, int quantidadePortas) =>
         Adicionar(new Carro(ProximoId(), placa, modelo, valorDiaria, quantidadePortas));
 

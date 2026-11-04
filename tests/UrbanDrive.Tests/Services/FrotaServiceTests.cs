@@ -10,7 +10,7 @@ public class FrotaServiceTests
     {
         var veiculos = new VeiculoService();
         var service = new FrotaService(new Frota("Principal"), veiculos);
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
 
         service.Adicionar(veiculo.Id);
 
@@ -30,7 +30,7 @@ public class FrotaServiceTests
     {
         var veiculos = new VeiculoService();
         var service = new FrotaService(new Frota("Principal"), veiculos);
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
         service.Adicionar(veiculo.Id);
 
         service.Remover(veiculo.Id);
@@ -44,7 +44,7 @@ public class FrotaServiceTests
     {
         var veiculos = new VeiculoService();
         var service = new FrotaService(new Frota("Principal"), veiculos);
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
 
         Assert.Throws<ArgumentException>(() => service.Remover(veiculo.Id));
     }

@@ -20,7 +20,7 @@ public class LocacaoServiceTests
     public void Registrar_ComMotoristaEVeiculoCadastrados_AdicionaNaLista()
     {
         var (locacoes, veiculos) = CriarServicos();
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
 
         var locacao = locacoes.Registrar("123.456.789-09", veiculo.Id, 3);
 
@@ -33,7 +33,7 @@ public class LocacaoServiceTests
     public void Registrar_ComCpfNaoCadastrado_LancaExcecao()
     {
         var (locacoes, veiculos) = CriarServicos();
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
 
         var erro = Assert.Throws<ArgumentException>(() => locacoes.Registrar("98765432100", veiculo.Id, 3));
 
@@ -56,7 +56,7 @@ public class LocacaoServiceTests
     public void Registrar_ComDiasInvalidos_NaoAdicionaNaLista()
     {
         var (locacoes, veiculos) = CriarServicos();
-        var veiculo = veiculos.Cadastrar("ABC1D23", "Onix", 150m);
+        var veiculo = veiculos.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
 
         Assert.Throws<ArgumentException>(() => locacoes.Registrar(Cpf, veiculo.Id, 0));
         Assert.Empty(locacoes.Listar());

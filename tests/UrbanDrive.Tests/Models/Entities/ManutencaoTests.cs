@@ -9,7 +9,7 @@ public class ManutencaoTests
     [Fact]
     public void RealizarManutencao_SemParametro_RegistraManutencaoGeral()
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
 
         var registro = veiculo.RealizarManutencao();
 
@@ -20,7 +20,7 @@ public class ManutencaoTests
     [Fact]
     public void RealizarManutencao_ComPeca_RegistraAPecaSubstituida()
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
 
         var registro = veiculo.RealizarManutencao("pastilha de freio");
 
@@ -31,7 +31,7 @@ public class ManutencaoTests
     [Fact]
     public void AsDuasSobrecargas_AcumulamNoMesmoHistorico()
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
 
         veiculo.RealizarManutencao();
         veiculo.RealizarManutencao("pneu");
@@ -45,7 +45,7 @@ public class ManutencaoTests
     [InlineData("   ")]
     public void RealizarManutencao_ComPecaVazia_LancaExcecaoENaoRegistra(string? peca)
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
 
         Assert.Throws<ArgumentException>(() => veiculo.RealizarManutencao(peca!));
         Assert.Empty(veiculo.HistoricoManutencoes);
@@ -54,7 +54,7 @@ public class ManutencaoTests
     [Fact]
     public void Historico_NaoPodeSerAlteradoDeFora()
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
         veiculo.RealizarManutencao();
 
         Assert.Throws<NotSupportedException>(() => ((IList<string>)veiculo.HistoricoManutencoes).Clear());
