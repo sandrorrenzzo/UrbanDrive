@@ -153,3 +153,4 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - 31/10/2026: fim da Sprint 1. PB01, PB02 e PB03 concluídos.
 - 02/11/2026: início da Sprint 2. Selecionados PB04, PB05, PB06 e PB07. O contador de veículos passa para o ConfiguradorSistema (PB06), resolvendo a pendência da Sprint 1 sobre o controle dos veículos criados.
 - 03/11/2026: fim da Sprint 2. PB04, PB05, PB06 e PB07 concluídos. O menu ganhou os serviços de motorista, locação e frota, que não estavam previstos como itens separados.
+- 03/11/2026: início da Sprint 3. Selecionados PB08, PB09 e PB10. Definidas as regras de aluguel: seguro de R$ 20,00 por dia para carro e 20% de desconto para patinete.
