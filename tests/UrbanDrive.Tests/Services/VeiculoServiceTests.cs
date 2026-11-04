@@ -66,4 +66,39 @@ public class VeiculoServiceTests
 
         Assert.Throws<ArgumentException>(() => service.RealizarManutencao(9999));
     }
+
+    [Fact]
+    public void CadastrarCarroEletrico_EntraNaListaDeVeiculos()
+    {
+        var service = new VeiculoService();
+
+        var carro = service.CadastrarCarroEletrico("ELE1C23", "Dolphin", 150m, 4);
+
+        Assert.Same(carro, service.Listar()[0]);
+        Assert.Equal("Carro elétrico", carro.Tipo);
+    }
+
+    [Fact]
+    public void Recarregar_VeiculoEletrico_VoltaParaCemPorCento()
+    {
+        var service = new VeiculoService();
+        var patinete = service.CadastrarPatinete("PAT0001", "Xiaomi M365", 30m, 25);
+        patinete.ConsumirBateria(5);
+
+        var recarregado = service.Recarregar(patinete.Id);
+
+        Assert.Same(patinete, recarregado);
+        Assert.Equal(100, patinete.NivelBateria);
+    }
+
+    [Fact]
+    public void Recarregar_VeiculoQueNaoEEletrico_LancaExcecao()
+    {
+        var service = new VeiculoService();
+        var carro = service.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
+
+        var erro = Assert.Throws<ArgumentException>(() => service.Recarregar(carro.Id));
+
+        Assert.Equal("Este veículo não é elétrico.", erro.Message);
+    }
 }
