@@ -1,10 +1,11 @@
 using UrbanDrive.Models.Configuracao;
+using UrbanDrive.Models.Interfaces;
 
 namespace UrbanDrive.Models.Entities;
 
 // abstract: Veiculo é só o modelo comum; os objetos criados são sempre de um tipo concreto
 // (Carro, Patinete ou CarroEletrico).
-public abstract class Veiculo
+public abstract class Veiculo : IImprimivel
 {
     private readonly int _id;
     private string _placa = string.Empty;
@@ -92,6 +93,15 @@ public abstract class Veiculo
 
         return RegistrarManutencao($"troca de {pecaSubstituida.Trim()}");
     }
+
+    // IImprimivel: virtual para que cada tipo de veículo acrescente as suas características.
+    public virtual string GerarRelatorio() => string.Join(Environment.NewLine,
+        $"=== Relatório do veículo #{Id} ===",
+        $"Tipo: {Tipo}",
+        $"Placa: {Placa}",
+        $"Modelo: {Modelo}",
+        $"Diária: {ValorDiaria:C}",
+        $"Manutenções registradas: {_historicoManutencoes.Count}");
 
     public override string ToString() =>
         $"#{Id} | {Tipo} | {Placa} | {Modelo} | Diária: {ValorDiaria:C}";

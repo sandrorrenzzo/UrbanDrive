@@ -1,6 +1,8 @@
+using UrbanDrive.Models.Interfaces;
+
 namespace UrbanDrive.Models.Entities;
 
-public class Frota
+public class Frota : IImprimivel
 {
     private string _nome = string.Empty;
 
@@ -40,6 +42,18 @@ public class Frota
     public bool Remover(Veiculo veiculo) => _veiculos.Remove(veiculo);
 
     public IReadOnlyList<Veiculo> Listar() => _veiculos.AsReadOnly();
+
+    public string GerarRelatorio()
+    {
+        var linhas = new List<string>
+        {
+            $"=== Relatório da frota {Nome} ===",
+            $"Quantidade de veículos: {Quantidade}",
+        };
+        linhas.AddRange(_veiculos.Select(v => $"  - {v}"));
+
+        return string.Join(Environment.NewLine, linhas);
+    }
 
     public override string ToString() => $"Frota {Nome} | {Quantidade} veículo(s)";
 }

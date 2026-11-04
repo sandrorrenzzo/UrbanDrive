@@ -21,6 +21,9 @@ public class Carro : Veiculo
 
     public override string Tipo => "Carro";
 
+    public override string GerarRelatorio() =>
+        $"{base.GerarRelatorio()}{Environment.NewLine}Portas: {QuantidadePortas}";
+
     public override string ToString() => $"{base.ToString()} | {QuantidadePortas} portas";
 
     private static int ValidarPortas(int quantidadePortas, int id)

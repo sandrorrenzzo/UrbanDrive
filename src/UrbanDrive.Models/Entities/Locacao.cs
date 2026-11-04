@@ -1,6 +1,8 @@
+using UrbanDrive.Models.Interfaces;
+
 namespace UrbanDrive.Models.Entities;
 
-public class Locacao
+public class Locacao : IImprimivel
 {
     private readonly Motorista _motorista;
     private readonly Veiculo _veiculo;
@@ -25,8 +27,16 @@ public class Locacao
     public Motorista Motorista => _motorista;
     public Veiculo Veiculo => _veiculo;
     public int Dias => _dias;
-    // Polimorfismo: o cálculo usado é o do tipo real do veículo (Carro, Patinete ou Veiculo).
+    // Polimorfismo: o cálculo usado é o do tipo real do veículo (Carro, Patinete ou CarroEletrico).
     public decimal ValorTotal => _veiculo.CalcularAluguel(_dias);
+
+    // O relatório da locação funciona como o recibo do aluguel.
+    public string GerarRelatorio() => string.Join(Environment.NewLine,
+        "=== Recibo de locação ===",
+        $"Motorista: {Motorista.Nome} (CPF {Motorista.Cpf})",
+        $"Veículo: {Veiculo.Tipo} {Veiculo.Placa} ({Veiculo.Modelo})",
+        $"Dias: {Dias}",
+        $"Valor total: {ValorTotal:C}");
 
     public override string ToString() =>
         $"{Motorista.Nome} alugou {Veiculo.Placa} ({Veiculo.Modelo}) por {Dias} dia(s) | Total: {ValorTotal:C}";
