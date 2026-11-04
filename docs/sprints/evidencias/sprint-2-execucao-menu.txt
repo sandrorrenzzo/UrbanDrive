@@ -1,0 +1,292 @@
+Execução do menu de console, Sprint 2 (03/11/2026 22:34)
+Roteiro: cadastra 2 veículos e 1 motorista, recusa CPF inválido, monta a frota, recusa veículo repetido, remove da frota, realiza locação, recusa CPF inexistente e 0 dias, mostra configurações, altera a taxa para 20% e lista a locação com o valor novo.
+
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Veículo cadastrado: #1 | ABC1D23 | Onix | Diária: R$ 150,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Placa: Modelo: Valor da diária: Veículo cadastrado: #2 | XYZ9K87 | HB20 | Diária: R$ 140,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Nome: CPF: Número da CNH: Categoria da CNH (A, B, AB, C, D, E): Validade da CNH (dd/mm/aaaa): Motorista cadastrado: Ana Souza | CPF 12345678909 | CNH 12345678900 | Categoria B | Validade 15/03/2028
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Nome: CPF: Número da CNH: Categoria da CNH (A, B, AB, C, D, E): Validade da CNH (dd/mm/aaaa): Erro: O CPF deve ter 11 dígitos.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Ana Souza | CPF 12345678909 | CNH 12345678900 | Categoria B | Validade 15/03/2028
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Id do veículo: Veículo ABC1D23 adicionado. Frota Principal | 1 veículo(s)
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Id do veículo: Veículo XYZ9K87 adicionado. Frota Principal | 2 veículo(s)
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Id do veículo: Erro: O veículo ABC1D23 já está na frota.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Frota Principal | 2 veículo(s)
+#1 | ABC1D23 | Onix | Diária: R$ 150,00
+#2 | XYZ9K87 | HB20 | Diária: R$ 140,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Id do veículo: Veículo XYZ9K87 removido. Frota Principal | 1 veículo(s)
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Frota Principal | 1 veículo(s)
+#1 | ABC1D23 | Onix | Diária: R$ 150,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou ABC1D23 (Onix) por 3 dia(s) | Total: R$ 495,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Erro: Motorista não encontrado.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Erro: A locação deve ter pelo menos 1 dia.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Ana Souza alugou ABC1D23 (Onix) por 3 dia(s) | Total: R$ 495,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Taxa de serviço: 10%
+Total de veículos criados: 2
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Nova taxa em % (ex.: 15): Taxa de serviço alterada para 20%.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: Ana Souza alugou ABC1D23 (Onix) por 3 dia(s) | Total: R$ 540,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+0 - Sair
+Opção: 
