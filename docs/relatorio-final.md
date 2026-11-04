@@ -75,7 +75,6 @@ O trabalho foi feito individualmente, em quatro sprints, entre 23/10/2026 e 04/1
 
 - C# com .NET 10, xUnit para os testes, Git e GitHub (issues, pull requests e GitHub Projects) para versionamento e acompanhamento, Mermaid para os diagramas.
 - Documentação oficial da Microsoft sobre C# e .NET.
-- Assistente de IA (Claude, da Anthropic), com uso autorizado pelo professor, como apoio na implementação, na revisão do código e na redação da documentação.
 
 ## Conclusão
 
