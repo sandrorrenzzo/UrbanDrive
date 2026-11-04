@@ -19,7 +19,9 @@ public class Carro : Veiculo
     // Reaproveita a regra comum de Veiculo e acrescenta o seguro diário do carro.
     public override decimal CalcularAluguel(int dias) => base.CalcularAluguel(dias) + SeguroPorDia * dias;
 
-    public override string ToString() => $"{base.ToString()} | Carro {QuantidadePortas} portas";
+    public override string Tipo => "Carro";
+
+    public override string ToString() => $"{base.ToString()} | {QuantidadePortas} portas";
 
     private static int ValidarPortas(int quantidadePortas, int id)
     {

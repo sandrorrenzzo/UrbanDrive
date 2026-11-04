@@ -20,7 +20,9 @@ public sealed class Patinete : Veiculo
     // Reaproveita a regra comum de Veiculo e aplica o desconto do patinete.
     public override decimal CalcularAluguel(int dias) => base.CalcularAluguel(dias) * (1 - Desconto);
 
-    public override string ToString() => $"{base.ToString()} | Patinete {AutonomiaKm} km de autonomia";
+    public override string Tipo => "Patinete";
+
+    public override string ToString() => $"{base.ToString()} | {AutonomiaKm} km de autonomia";
 
     private static int ValidarAutonomia(int autonomiaKm, int id)
     {

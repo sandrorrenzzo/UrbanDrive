@@ -2,7 +2,9 @@ using UrbanDrive.Models.Configuracao;
 
 namespace UrbanDrive.Models.Entities;
 
-public class Veiculo
+// abstract: Veiculo é só o modelo comum; os objetos criados são sempre de um tipo concreto
+// (Carro, Patinete ou CarroEletrico).
+public abstract class Veiculo
 {
     private readonly int _id;
     private string _placa = string.Empty;
@@ -10,7 +12,8 @@ public class Veiculo
     private decimal _valorDiaria;
     private readonly List<string> _historicoManutencoes = new();
 
-    public Veiculo(int id, string placa, string modelo, decimal valorDiaria)
+    // protected: só as classes filhas chamam este construtor, por meio de : base(...).
+    protected Veiculo(int id, string placa, string modelo, decimal valorDiaria)
     {
         if (id <= 0)
             throw new ArgumentException("O identificador deve ser maior que zero.");
@@ -25,6 +28,9 @@ public class Veiculo
     }
 
     public int Id => _id;
+
+    // Membro abstrato: Veiculo não sabe o próprio tipo; cada classe filha é obrigada a informar.
+    public abstract string Tipo { get; }
 
     public string Placa
     {
@@ -88,7 +94,7 @@ public class Veiculo
     }
 
     public override string ToString() =>
-        $"#{Id} | {Placa} | {Modelo} | Diária: {ValorDiaria:C}";
+        $"#{Id} | {Tipo} | {Placa} | {Modelo} | Diária: {ValorDiaria:C}";
 
     private string RegistrarManutencao(string descricao)
     {
