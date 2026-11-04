@@ -155,3 +155,4 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - 03/11/2026: fim da Sprint 2. PB04, PB05, PB06 e PB07 concluídos. O menu ganhou os serviços de motorista, locação e frota, que não estavam previstos como itens separados.
 - 03/11/2026: início da Sprint 3. Selecionados PB08, PB09 e PB10. Definidas as regras de aluguel: seguro de R$ 20,00 por dia para carro e 20% de desconto para patinete.
 - 04/11/2026: fim da Sprint 3. PB08, PB09 e PB10 concluídos. A Locacao passou a usar o CalcularAluguel de cada tipo de veículo.
+- 04/11/2026: início da Sprint 4. Selecionados PB11 a PB15. Definidas as regras dos veículos elétricos (bateria, consumo de 10% por dia, bloqueio abaixo de 20%) e o cálculo do CarroEletrico (carro + R$ 10,00 por dia de recarga).
