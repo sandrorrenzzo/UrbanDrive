@@ -9,11 +9,12 @@ public class VeiculoService
 
     public Veiculo Cadastrar(string placa, string modelo, decimal valorDiaria)
     {
-        // O próximo Id vem do contador compartilhado do sistema.
         var veiculo = new Veiculo(ConfiguradorSistema.TotalVeiculos + 1, placa, modelo, valorDiaria);
         _veiculos.Add(veiculo);
         return veiculo;
     }
 
     public IReadOnlyList<Veiculo> Listar() => _veiculos.AsReadOnly();
+
+    public Veiculo? BuscarPorId(int id) => _veiculos.FirstOrDefault(v => v.Id == id);
 }

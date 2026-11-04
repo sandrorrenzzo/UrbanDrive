@@ -28,4 +28,7 @@ public class Locacao
     public Veiculo Veiculo => _veiculo;
     public int Dias => _dias;
     public decimal ValorTotal => _veiculo.ValorDiaria * _dias * (1 + ConfiguradorSistema.TaxaServico);
+
+    public override string ToString() =>
+        $"{Motorista.Nome} alugou {Veiculo.Placa} ({Veiculo.Modelo}) por {Dias} dia(s) | Total: {ValorTotal:C}";
 }
