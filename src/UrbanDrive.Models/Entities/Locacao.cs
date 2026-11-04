@@ -19,6 +19,10 @@ public class Locacao : IImprimivel
         if (dias <= 0)
             throw new ArgumentException("A locação deve ter pelo menos 1 dia.");
 
+        // Só veículos elétricos têm bateria: a locação consome a carga, ou é recusada se ela estiver baixa.
+        if (veiculo is IEletrico eletrico)
+            eletrico.ConsumirBateria(dias);
+
         _motorista = motorista;
         _veiculo = veiculo;
         _dias = dias;
