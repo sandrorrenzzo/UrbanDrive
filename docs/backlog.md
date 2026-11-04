@@ -52,7 +52,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB02
 - Prioridade: Alta
 - Estimativa: 1,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB05: `Frota` com lista de veículos (agregação)**
 - Issue: #5
@@ -60,7 +60,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB02
 - Prioridade: Alta
 - Estimativa: 1 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB06: `ConfiguradorSistema` com membros estáticos**
 - Issue: #6
@@ -68,7 +68,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB02
 - Prioridade: Média
 - Estimativa: 1 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB07: `Locacao` ligando `Motorista` e `Veiculo` (associação)**
 - Issue: #7
@@ -76,7 +76,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB04
 - Prioridade: Média
 - Estimativa: 1 h
-- Situação: A fazer
+- Situação: Concluído
 
 ## Sprint 3 (total: 3,5 h)
 
@@ -152,3 +152,4 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - 31/10/2026: revisão das estimativas, de 34 h para 17,5 h no total, por considerar as primeiras muito altas para o tamanho de cada item.
 - 31/10/2026: fim da Sprint 1. PB01, PB02 e PB03 concluídos.
 - 02/11/2026: início da Sprint 2. Selecionados PB04, PB05, PB06 e PB07. O contador de veículos passa para o ConfiguradorSistema (PB06), resolvendo a pendência da Sprint 1 sobre o controle dos veículos criados.
+- 03/11/2026: fim da Sprint 2. PB04, PB05, PB06 e PB07 concluídos. O menu ganhou os serviços de motorista, locação e frota, que não estavam previstos como itens separados.

@@ -186,16 +186,103 @@ Unidade utilizada nas estimativas: horas.
 
 ## G. Resultado da sprint
 
-A preencher ao fim da sprint.
+**T01**
+- **Item ou tarefa:** T01, classe `CNH` com validações e construtor interno (PB04)
+- **Situação:** concluído
+- **Evidência:** PR #23, commit `47decdd`
+- **Observações:** foi criado também o enum `CategoriaCnh`.
+
+**T02**
+- **Item ou tarefa:** T02, classe `Motorista` que cria a `CNH` no construtor (PB04)
+- **Situação:** concluído
+- **Evidência:** PR #23, commit `28d6ee4`
+- **Observações:** nenhuma.
+
+**T03**
+- **Item ou tarefa:** T03, testes de `Motorista` e `CNH` (PB04)
+- **Situação:** concluído
+- **Evidência:** PR #23, commit `ebee5eb`
+- **Observações:** os testes verificam que a `CNH` não tem construtor público e que não pode ser trocada.
+
+**T04**
+- **Item ou tarefa:** T04, classe `Frota` (PB05)
+- **Situação:** concluído
+- **Evidência:** PR #24, commit `d82215e`
+- **Observações:** nenhuma.
+
+**T05**
+- **Item ou tarefa:** T05, testes de `Frota` (PB05)
+- **Situação:** concluído
+- **Evidência:** PR #24, commit `4e902df`
+- **Observações:** inclui o caso do mesmo veículo em duas frotas.
+
+**T06**
+- **Item ou tarefa:** T06, `ConfiguradorSistema` com taxa e contador estáticos (PB06)
+- **Situação:** concluído
+- **Evidência:** PR #25, commit `9c239f0`
+- **Observações:** o `VeiculoService` passou a gerar o Id a partir do contador, resolvendo a pendência da Sprint 1. Foi preciso desativar a execução paralela dos testes por causa do estado estático.
+
+**T07**
+- **Item ou tarefa:** T07, testes do contador e da taxa (PB06)
+- **Situação:** concluído
+- **Evidência:** PR #25, commit `870cc7a`
+- **Observações:** nenhuma.
+
+**T08**
+- **Item ou tarefa:** T08, classe `Locacao` (PB07)
+- **Situação:** concluído
+- **Evidência:** PR #27, commit `a10a34f`
+- **Observações:** o `ValorTotal` é calculado na leitura, então acompanha mudanças na taxa.
+
+**T09**
+- **Item ou tarefa:** T09, testes de `Locacao` (PB07)
+- **Situação:** concluído
+- **Evidência:** PR #27, commit `504c358`
+- **Observações:** inclui o teste de integração entre motorista, frota, locação e contador previsto na seção E.
+
+**T10**
+- **Item ou tarefa:** T10, novas opções no menu
+- **Situação:** concluído
+- **Evidência:** PR #29, `evidencias/sprint-2-execucao-menu.txt`
+- **Observações:** para manter o `Program.cs` sem regra de negócio, foram criados `MotoristaService`, `LocacaoService` e `FrotaService`, com 13 testes, que não estavam previstos no planejamento.
+
+**T11**
+- **Item ou tarefa:** T11, evidências
+- **Situação:** concluído
+- **Evidência:** `docs/sprints/evidencias/sprint-2-testes.txt` e `sprint-2-execucao-menu.txt`
+- **Observações:** 63 testes aprovados, 0 falhas.
+
+**T12**
+- **Item ou tarefa:** T12, diagrama de classes atualizado
+- **Situação:** concluído
+- **Evidência:** `docs/diagramas/classes-sprint-2.md`
+- **Observações:** mostra composição, agregação, associação e os membros estáticos.
+
+**T13**
+- **Item ou tarefa:** T13, backlog, resultado e retrospectiva
+- **Situação:** concluído
+- **Evidência:** `docs/backlog.md` e este documento
+- **Observações:** nenhuma.
+
+**Trabalho feito fora do planejamento**
+- PR #26: padrão de código com `.editorconfig` e verificação de estilo no `dotnet build`.
+- PR #28: testes reorganizados em pastas que espelham o `src`.
+
+**Pendências para a Sprint 3**
+- O `ValorTotal` da `Locacao` faz o cálculo direto. Na Sprint 3 ele deve passar a usar o `CalcularAluguel(int dias)` de cada tipo de veículo (PB09).
 
 ## H. Retrospectiva
 
-A preencher ao fim da sprint.
-
 **O que funcionou bem?**
+Usar `Closes #N` nos PRs: as issues #4 a #7 fecharam e foram para Done sozinhas, o que era uma melhoria registrada na Sprint 1. Também ajudou fazer a `Locacao` e os serviços escrevendo o código com orientação, entendendo cada parte antes de seguir.
 
 **Quais foram as principais dificuldades?**
+Entender a diferença entre composição, agregação e associação na prática e o conceito de locação. O estado estático do `ConfiguradorSistema` fez os testes interferirem uns nos outros quando rodavam em paralelo. Também foi gasto tempo configurando a formatação do VS Code, que usava a indentação detectada no arquivo em vez da regra do projeto.
 
 **O planejamento foi adequado ao esforço necessário?**
+Os quatro itens do backlog foram concluídos, mas o esforço foi maior que as 7 h planejadas: os três serviços do menu, o padrão de código e a reorganização dos testes não estavam previstos. O tempo real por tarefa não foi anotado, então não dá para medir a diferença com precisão.
 
 **O que deverá ser melhorado na próxima sprint?**
+- Prever no planejamento as classes de serviço que o menu vai precisar.
+- Registrar no planejamento, assim que surgir, qualquer tarefa nova que não estava prevista.
+- Anotar o tempo real de cada tarefa, pendência que continua desde a Sprint 1.
