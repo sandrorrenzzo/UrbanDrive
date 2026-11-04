@@ -185,21 +185,95 @@ Seguindo a retrospectiva da Sprint 2, o planejamento já inclui as mudanças nos
 
 ## G. Resultado da sprint
 
-A preencher ao fim da sprint. Para cada item ou tarefa:
+O tempo real de cada tarefa não foi anotado nesta sprint, apesar de estar previsto na seção D. Por isso as tarefas abaixo não trazem esse campo (ver retrospectiva).
 
-- **Item ou tarefa:**
-- **Situação:** (concluído, parcialmente concluído ou não concluído)
-- **Evidência:**
-- **Observações:**
+**T01**
+- **Item ou tarefa:** T01, `Carro : Veiculo` com portas e `: base(...)` (PB08)
+- **Situação:** concluído
+- **Evidência:** PR #32, commit `7468a48`
+- **Observações:** como o construtor da base roda primeiro, a validação das portas é feita dentro da chamada `base(...)`, para que um carro inválido não incremente o contador.
+
+**T02**
+- **Item ou tarefa:** T02, `sealed Patinete : Veiculo` com autonomia (PB08)
+- **Situação:** concluído
+- **Evidência:** PR #32, commit `9fce49e`
+- **Observações:** mesma solução de T01 para a validação da autonomia.
+
+**T03**
+- **Item ou tarefa:** T03, testes de `Carro` e `Patinete` (PB08)
+- **Situação:** concluído
+- **Evidência:** PR #32, commit `64e56cb`
+- **Observações:** 14 testes, incluindo `Patinete` selado e o contador.
+
+**T04**
+- **Item ou tarefa:** T04, `CalcularAluguel` virtual em `Veiculo` (PB09)
+- **Situação:** concluído
+- **Evidência:** PR #33, commit `c773fa0`
+- **Observações:** nenhuma.
+
+**T05**
+- **Item ou tarefa:** T05, `override` em `Carro` e `Patinete` (PB09)
+- **Situação:** concluído
+- **Evidência:** PR #33, commit `f6630ea`
+- **Observações:** os dois chamam `base.CalcularAluguel(dias)`, sem repetir a regra comum.
+
+**T06**
+- **Item ou tarefa:** T06, `Locacao` usando `CalcularAluguel` e testes de cálculo (PB09)
+- **Situação:** concluído
+- **Evidência:** PR #33, commit `088668a`
+- **Observações:** resolve a pendência da Sprint 2. A verificação de estilo do build apontou o `using` que ficou sem uso na `Locacao`.
+
+**T07**
+- **Item ou tarefa:** T07, sobrecargas de `RealizarManutencao` com histórico (PB10)
+- **Situação:** concluído
+- **Evidência:** PR #34, commits `5f20db0` e `5202d82`
+- **Observações:** a manutenção fica em `Veiculo` e vale para carro e patinete.
+
+**T08**
+- **Item ou tarefa:** T08, cadastro de carro e patinete no `VeiculoService`
+- **Situação:** concluído
+- **Evidência:** PR #35, commit `7c80db1`
+- **Observações:** a manutenção pelo Id do veículo também foi colocada no serviço, para o menu não ter regra de negócio.
+
+**T09**
+- **Item ou tarefa:** T09, menu com tipos, simulação de aluguel e manutenção
+- **Situação:** concluído
+- **Evidência:** PR #35, commit `8015199`, `evidencias/sprint-3-execucao-menu.txt`
+- **Observações:** a opção 12 mostra o polimorfismo: R$ 495,00, R$ 555,00 e R$ 79,20 para o mesmo período.
+
+**T10**
+- **Item ou tarefa:** T10, evidências
+- **Situação:** concluído
+- **Evidência:** `docs/sprints/evidencias/sprint-3-testes.txt` e `sprint-3-execucao-menu.txt`
+- **Observações:** 96 testes aprovados, 0 falhas.
+
+**T11**
+- **Item ou tarefa:** T11, diagrama da hierarquia de veículos
+- **Situação:** concluído
+- **Evidência:** `docs/diagramas/classes-sprint-3.md`
+- **Observações:** nenhuma.
+
+**T12**
+- **Item ou tarefa:** T12, backlog, resultado e retrospectiva
+- **Situação:** concluído
+- **Evidência:** `docs/backlog.md` e este documento
+- **Observações:** nenhuma.
+
+**Pendências para a Sprint 4**
+- O menu ainda cadastra "veículo comum". Quando `Veiculo` virar abstrata (PB11), essa opção e os testes que criam `new Veiculo(...)` precisam ser ajustados.
 
 ## H. Retrospectiva
 
-A preencher ao fim da sprint.
-
 **O que funcionou bem?**
+Colocar a regra comum em `Veiculo` e usar `base` nas classes filhas: `Carro` e `Patinete` ficaram curtas e só com o que é delas. Prever no planejamento o serviço e o menu evitou trabalho fora do plano, que foi o problema da Sprint 2. A verificação de estilo no build também ajudou a pegar código sobrando.
 
 **Quais foram as principais dificuldades?**
+Entender que o construtor da classe base roda antes do construtor da classe filha, o que fazia um carro inválido ser contado no `ConfiguradorSistema`. Também houve dois PRs (#32 e #34) que pareciam mergeados mas continuavam abertos, porque faltou confirmar o merge no GitHub.
 
 **O planejamento foi adequado ao esforço necessário?**
+Sim em escopo: todas as 12 tarefas foram concluídas, sem trabalho extra fora do planejado. A sprint terminou em dois dias (03/11 e 04/11), dentro do período. O tempo real por tarefa, porém, mais uma vez não foi anotado, então não dá para comparar com as 6,5 h estimadas.
 
 **O que deverá ser melhorado na próxima sprint?**
+- Anotar o tempo real no momento em que cada issue for movida para Done, já que só a intenção de anotar não funcionou em três sprints.
+- Conferir que o PR mostra "Merged" antes de começar a tarefa seguinte.
+- Tratar logo no início da Sprint 4 os pontos do código que criam `new Veiculo(...)`, por causa da classe abstrata.

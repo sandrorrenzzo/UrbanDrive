@@ -1,0 +1,273 @@
+Execução do menu de console, Sprint 3 (04/11/2026 13:00)
+Roteiro: cadastra um veículo comum, um carro e um patinete, recusa carro com 0 portas e tipo inválido, lista, simula o aluguel de todos por 3 dias, faz uma locação de carro e uma de patinete, registra manutenção geral e com peça, e recusa Id inexistente.
+
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Veículo cadastrado: #1 | AAA1A11 | Generico | Diária: R$ 150,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Quantidade de portas: Veículo cadastrado: #2 | ABC1D23 | Onix | Diária: R$ 150,00 | Carro 4 portas
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Autonomia da bateria (km): Veículo cadastrado: #3 | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | Patinete 25 km de autonomia
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Quantidade de portas: Erro: A quantidade de portas deve ser maior que zero.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete
+Escolha o tipo: Erro: tipo inválido.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: #1 | AAA1A11 | Generico | Diária: R$ 150,00
+#2 | ABC1D23 | Onix | Diária: R$ 150,00 | Carro 4 portas
+#3 | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | Patinete 25 km de autonomia
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Quantidade de dias: #1 | AAA1A11 | Generico | Diária: R$ 150,00 => 3 dia(s): R$ 495,00
+#2 | ABC1D23 | Onix | Diária: R$ 150,00 | Carro 4 portas => 3 dia(s): R$ 555,00
+#3 | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | Patinete 25 km de autonomia => 3 dia(s): R$ 79,20
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Nome: CPF: Número da CNH: Categoria da CNH (A, B, AB, C, D, E): Validade da CNH (dd/mm/aaaa): Motorista cadastrado: Ana Souza | CPF 12345678909 | CNH 12345678900 | Categoria B | Validade 15/03/2028
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou ABC1D23 (Onix) por 3 dia(s) | Total: R$ 555,00
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou PAT0001 (Xiaomi M365) por 3 dia(s) | Total: R$ 79,20
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Ana Souza alugou ABC1D23 (Onix) por 3 dia(s) | Total: R$ 555,00
+Ana Souza alugou PAT0001 (Xiaomi M365) por 3 dia(s) | Total: R$ 79,20
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Id do veículo: Peça substituída (deixe vazio para manutenção geral): Manutenção registrada: 04/11/2026: manutenção geral
+Histórico do veículo:
+  04/11/2026: manutenção geral
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Id do veículo: Peça substituída (deixe vazio para manutenção geral): Manutenção registrada: 04/11/2026: troca de pastilha de freio
+Histórico do veículo:
+  04/11/2026: manutenção geral
+  04/11/2026: troca de pastilha de freio
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: Id do veículo: Peça substituída (deixe vazio para manutenção geral): Erro: Veículo não encontrado.
+
+=== UrbanDrive ===
+1 - Cadastrar veículo
+2 - Listar veículos
+3 - Cadastrar motorista
+4 - Listar motoristas
+5 - Adicionar veículo à frota
+6 - Remover veículo da frota
+7 - Listar frota
+8 - Realizar locação
+9 - Listar locações
+10 - Ver configurações
+11 - Alterar taxa de serviço
+12 - Simular aluguel de todos os veículos
+13 - Registrar manutenção
+0 - Sair
+Opção: 
