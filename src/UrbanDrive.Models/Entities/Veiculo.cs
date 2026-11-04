@@ -61,6 +61,16 @@ public class Veiculo
         }
     }
 
+    // Regra comum a todos os veículos: diária × dias, acrescido da taxa de serviço.
+    // virtual: cada tipo de veículo pode sobrescrever e acrescentar a sua regra.
+    public virtual decimal CalcularAluguel(int dias)
+    {
+        if (dias <= 0)
+            throw new ArgumentException("A locação deve ter pelo menos 1 dia.");
+
+        return ValorDiaria * dias * (1 + ConfiguradorSistema.TaxaServico);
+    }
+
     public override string ToString() =>
         $"#{Id} | {Placa} | {Modelo} | Diária: {ValorDiaria:C}";
 }
