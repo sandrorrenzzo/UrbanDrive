@@ -8,6 +8,7 @@ public class Veiculo
     private string _placa = string.Empty;
     private string _modelo = string.Empty;
     private decimal _valorDiaria;
+    private readonly List<string> _historicoManutencoes = new();
 
     public Veiculo(int id, string placa, string modelo, decimal valorDiaria)
     {
@@ -71,6 +72,28 @@ public class Veiculo
         return ValorDiaria * dias * (1 + ConfiguradorSistema.TaxaServico);
     }
 
+    public IReadOnlyList<string> HistoricoManutencoes => _historicoManutencoes.AsReadOnly();
+
+    // Sobrecarga: mesmo nome, parâmetros diferentes.
+    // Sem parâmetro, registra uma manutenção geral.
+    public string RealizarManutencao() => RegistrarManutencao("manutenção geral");
+
+    // Com parâmetro, registra qual peça foi substituída.
+    public string RealizarManutencao(string pecaSubstituida)
+    {
+        if (string.IsNullOrWhiteSpace(pecaSubstituida))
+            throw new ArgumentException("A peça substituída não pode ser nula ou vazia.");
+
+        return RegistrarManutencao($"troca de {pecaSubstituida.Trim()}");
+    }
+
     public override string ToString() =>
         $"#{Id} | {Placa} | {Modelo} | Diária: {ValorDiaria:C}";
+
+    private string RegistrarManutencao(string descricao)
+    {
+        var registro = $"{DateTime.Today:dd/MM/yyyy}: {descricao}";
+        _historicoManutencoes.Add(registro);
+        return registro;
+    }
 }
