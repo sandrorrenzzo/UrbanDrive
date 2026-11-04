@@ -2,6 +2,8 @@ namespace UrbanDrive.Models.Entities;
 
 public class Carro : Veiculo
 {
+    private const decimal SeguroPorDia = 20m;
+
     private readonly int _quantidadePortas;
 
     // As portas são validadas antes de chamar o construtor de Veiculo,
@@ -13,6 +15,9 @@ public class Carro : Veiculo
     }
 
     public int QuantidadePortas => _quantidadePortas;
+
+    // Reaproveita a regra comum de Veiculo e acrescenta o seguro diário do carro.
+    public override decimal CalcularAluguel(int dias) => base.CalcularAluguel(dias) + SeguroPorDia * dias;
 
     public override string ToString() => $"{base.ToString()} | Carro {QuantidadePortas} portas";
 
