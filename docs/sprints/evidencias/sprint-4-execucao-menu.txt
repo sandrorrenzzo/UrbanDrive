@@ -1,0 +1,524 @@
+Execução do menu de console, Sprint 4 (versão final, 04/11/2026 13:20)
+Roteiro: cadastra carro, carro elétrico e patinete, simula o aluguel dos três por 3 dias, cadastra motorista, monta a frota, loca o patinete por 9 dias, tem a locação seguinte recusada por bateria baixa, recarrega, loca de novo, tenta recarregar um carro comum, registra manutenção, loca o carro elétrico e gera todos os relatórios.
+
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Tipo: 1 - Carro | 2 - Carro elétrico | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Quantidade de portas: Veículo cadastrado: #1 | Carro | ABC1D23 | Onix | Diária: R$ 150,00 | 4 portas
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Tipo: 1 - Carro | 2 - Carro elétrico | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Quantidade de portas: Veículo cadastrado: #2 | Carro elétrico | ELE1C23 | Dolphin | Diária: R$ 150,00 | 4 portas | bateria 100%
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Tipo: 1 - Carro | 2 - Carro elétrico | 3 - Patinete
+Escolha o tipo: Placa: Modelo: Valor da diária: Autonomia da bateria (km): Veículo cadastrado: #3 | Patinete | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | 25 km de autonomia | bateria 100%
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: #1 | Carro | ABC1D23 | Onix | Diária: R$ 150,00 | 4 portas
+#2 | Carro elétrico | ELE1C23 | Dolphin | Diária: R$ 150,00 | 4 portas | bateria 100%
+#3 | Patinete | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | 25 km de autonomia | bateria 100%
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Quantidade de dias: #1 | Carro | ABC1D23 | Onix | Diária: R$ 150,00 | 4 portas => 3 dia(s): R$ 555,00
+#2 | Carro elétrico | ELE1C23 | Dolphin | Diária: R$ 150,00 | 4 portas | bateria 100% => 3 dia(s): R$ 585,00
+#3 | Patinete | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | 25 km de autonomia | bateria 100% => 3 dia(s): R$ 79,20
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Nome: CPF: Número da CNH: Categoria da CNH (A, B, AB, C, D, E): Validade da CNH (dd/mm/aaaa): Motorista cadastrado: Ana Souza | CPF 12345678909 | CNH 12345678900 | Categoria B | Validade 15/03/2028
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Id do veículo: Veículo ABC1D23 adicionado. Frota Principal | 1 veículo(s)
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Id do veículo: Veículo PAT0001 adicionado. Frota Principal | 2 veículo(s)
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou PAT0001 (Xiaomi M365) por 9 dia(s) | Total: R$ 237,60
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Erro: Bateria em 10%. Recarregue o veículo antes de locar (mínimo de 20%).
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Id do veículo elétrico: Veículo recarregado. Bateria: 100%
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou PAT0001 (Xiaomi M365) por 2 dia(s) | Total: R$ 52,80
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Id do veículo elétrico: Erro: Este veículo não é elétrico.
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Id do veículo: Peça substituída (deixe vazio para manutenção geral): Manutenção registrada: 04/11/2026: troca de pneu
+Histórico do veículo:
+  04/11/2026: troca de pneu
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: CPF do motorista: Id do veículo: Quantidade de dias: Locação registrada: Ana Souza alugou ELE1C23 (Dolphin) por 3 dia(s) | Total: R$ 585,00
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Ana Souza alugou PAT0001 (Xiaomi M365) por 9 dia(s) | Total: R$ 237,60
+Ana Souza alugou PAT0001 (Xiaomi M365) por 2 dia(s) | Total: R$ 52,80
+Ana Souza alugou ELE1C23 (Dolphin) por 3 dia(s) | Total: R$ 585,00
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: 
+=== Relatório do veículo #1 ===
+Tipo: Carro
+Placa: ABC1D23
+Modelo: Onix
+Diária: R$ 150,00
+Manutenções registradas: 1
+Portas: 4
+
+=== Relatório do veículo #2 ===
+Tipo: Carro elétrico
+Placa: ELE1C23
+Modelo: Dolphin
+Diária: R$ 150,00
+Manutenções registradas: 0
+Portas: 4
+Bateria: 70%
+
+=== Relatório do veículo #3 ===
+Tipo: Patinete
+Placa: PAT0001
+Modelo: Xiaomi M365
+Diária: R$ 30,00
+Manutenções registradas: 0
+Autonomia: 25 km
+Bateria: 80%
+
+=== Relatório do motorista ===
+Nome: Ana Souza
+CPF: 12345678909
+CNH: 12345678900 | Categoria B | Validade 15/03/2028
+
+=== Relatório da frota Principal ===
+Quantidade de veículos: 2
+  - #1 | Carro | ABC1D23 | Onix | Diária: R$ 150,00 | 4 portas
+  - #3 | Patinete | PAT0001 | Xiaomi M365 | Diária: R$ 30,00 | 25 km de autonomia | bateria 80%
+
+=== Recibo de locação ===
+Motorista: Ana Souza (CPF 12345678909)
+Veículo: Patinete PAT0001 (Xiaomi M365)
+Dias: 9
+Valor total: R$ 237,60
+
+=== Recibo de locação ===
+Motorista: Ana Souza (CPF 12345678909)
+Veículo: Patinete PAT0001 (Xiaomi M365)
+Dias: 2
+Valor total: R$ 52,80
+
+=== Recibo de locação ===
+Motorista: Ana Souza (CPF 12345678909)
+Veículo: Carro elétrico ELE1C23 (Dolphin)
+Dias: 3
+Valor total: R$ 585,00
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: Taxa de serviço: 10%
+Total de veículos criados: 3
+
+=== UrbanDrive ===
+Veículos
+  1 - Cadastrar veículo
+  2 - Listar veículos
+  3 - Simular aluguel de todos os veículos
+  4 - Registrar manutenção
+  5 - Recarregar veículo elétrico
+Motoristas
+  6 - Cadastrar motorista
+  7 - Listar motoristas
+Frota
+  8 - Adicionar veículo à frota
+  9 - Remover veículo da frota
+  10 - Listar frota
+Locações
+  11 - Realizar locação
+  12 - Listar locações
+Relatórios e configurações
+  13 - Gerar relatórios
+  14 - Ver configurações
+  15 - Alterar taxa de serviço
+  0 - Sair
+Opção: 
