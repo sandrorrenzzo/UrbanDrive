@@ -4,7 +4,7 @@ namespace UrbanDrive.Tests.Models.Entities;
 
 public class FrotaTests
 {
-    private static Veiculo CriarVeiculo(int id, string placa) => new(id, placa, "Onix", 150m);
+    private static Veiculo CriarVeiculo(int id, string placa) => new VeiculoDeTeste(id, placa, "Onix", 150m);
 
     [Fact]
     public void Adicionar_VeiculoValido_ApareceNaListagem()

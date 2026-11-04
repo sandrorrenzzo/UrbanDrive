@@ -85,10 +85,10 @@ while (true)
 
 void CadastrarVeiculo()
 {
-    Console.WriteLine("Tipo: 1 - Veículo comum | 2 - Carro | 3 - Patinete");
+    Console.WriteLine("Tipo: 1 - Carro | 2 - Patinete");
     Console.Write("Escolha o tipo: ");
     var tipo = Console.ReadLine();
-    if (tipo is not ("1" or "2" or "3"))
+    if (tipo is not ("1" or "2"))
     {
         Console.WriteLine("Erro: tipo inválido.");
         return;
@@ -109,19 +109,16 @@ void CadastrarVeiculo()
 
     var portas = 0;
     var autonomia = 0;
-    if (tipo == "2" && !LerInteiro("Quantidade de portas: ", out portas))
+    if (tipo == "1" && !LerInteiro("Quantidade de portas: ", out portas))
         return;
-    if (tipo == "3" && !LerInteiro("Autonomia da bateria (km): ", out autonomia))
+    if (tipo == "2" && !LerInteiro("Autonomia da bateria (km): ", out autonomia))
         return;
 
     Executar(() =>
     {
-        Veiculo veiculo = tipo switch
-        {
-            "2" => veiculoService.CadastrarCarro(placa, modelo, valorDiaria, portas),
-            "3" => veiculoService.CadastrarPatinete(placa, modelo, valorDiaria, autonomia),
-            _ => veiculoService.Cadastrar(placa, modelo, valorDiaria),
-        };
+        Veiculo veiculo = tipo == "1"
+            ? veiculoService.CadastrarCarro(placa, modelo, valorDiaria, portas)
+            : veiculoService.CadastrarPatinete(placa, modelo, valorDiaria, autonomia);
         Console.WriteLine($"Veículo cadastrado: {veiculo}");
     });
 }

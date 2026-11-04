@@ -10,8 +10,8 @@ public class VeiculoServiceTests
     {
         var service = new VeiculoService();
 
-        var primeiro = service.Cadastrar("ABC1D23", "Onix", 150m);
-        var segundo = service.Cadastrar("XYZ9K87", "HB20", 140m);
+        var primeiro = service.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
+        var segundo = service.CadastrarCarro("XYZ9K87", "HB20", 140m, 4);
 
         Assert.Equal(primeiro.Id + 1, segundo.Id);
         Assert.Equal(2, service.Listar().Count);
@@ -22,7 +22,7 @@ public class VeiculoServiceTests
     {
         var service = new VeiculoService();
 
-        Assert.Throws<ArgumentException>(() => service.Cadastrar("", "Onix", 150m));
+        Assert.Throws<ArgumentException>(() => service.CadastrarCarro("", "Onix", 150m, 4));
         Assert.Empty(service.Listar());
     }
 

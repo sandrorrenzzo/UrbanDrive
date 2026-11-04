@@ -1,5 +1,4 @@
 using UrbanDrive.Models.Configuracao;
-using UrbanDrive.Models.Entities;
 using UrbanDrive.Services;
 
 namespace UrbanDrive.Tests.Models.Configuracao;
@@ -11,8 +10,8 @@ public class ConfiguradorSistemaTests
     {
         var antes = ConfiguradorSistema.TotalVeiculos;
 
-        _ = new Veiculo(1, "ABC1D23", "Onix", 150m);
-        _ = new Veiculo(2, "XYZ9K87", "HB20", 140m);
+        _ = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
+        _ = new VeiculoDeTeste(2, "XYZ9K87", "HB20", 140m);
 
         Assert.Equal(antes + 2, ConfiguradorSistema.TotalVeiculos);
     }
@@ -22,7 +21,7 @@ public class ConfiguradorSistemaTests
     {
         var antes = ConfiguradorSistema.TotalVeiculos;
 
-        Assert.Throws<ArgumentException>(() => new Veiculo(1, "", "Onix", 150m));
+        Assert.Throws<ArgumentException>(() => new VeiculoDeTeste(1, "", "Onix", 150m));
 
         Assert.Equal(antes, ConfiguradorSistema.TotalVeiculos);
     }
@@ -39,8 +38,8 @@ public class ConfiguradorSistemaTests
         var servicoA = new VeiculoService();
         var servicoB = new VeiculoService();
 
-        var primeiro = servicoA.Cadastrar("ABC1D23", "Onix", 150m);
-        var segundo = servicoB.Cadastrar("XYZ9K87", "HB20", 140m);
+        var primeiro = servicoA.CadastrarCarro("ABC1D23", "Onix", 150m, 4);
+        var segundo = servicoB.CadastrarCarro("XYZ9K87", "HB20", 140m, 4);
 
         Assert.Equal(primeiro.Id + 1, segundo.Id);
     }

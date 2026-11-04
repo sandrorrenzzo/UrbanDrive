@@ -20,7 +20,7 @@ public class CalcularAluguelTests : IDisposable
     [Fact]
     public void Veiculo_CalculaDiariaVezesDiasMaisTaxa()
     {
-        var veiculo = new Veiculo(1, "ABC1D23", "Onix", 150m);
+        var veiculo = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
 
         Assert.Equal(495m, veiculo.CalcularAluguel(3));
     }
@@ -48,7 +48,7 @@ public class CalcularAluguelTests : IDisposable
     {
         var veiculos = new List<Veiculo>
         {
-            new Veiculo(1, "ABC1D23", "Onix", 150m),
+            new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m),
             new Carro(2, "ABC1D23", "Onix", 150m, 4),
             new Patinete(3, "PAT0001", "Xiaomi M365", 30m, 25),
         };
@@ -65,7 +65,7 @@ public class CalcularAluguelTests : IDisposable
     {
         Veiculo[] veiculos =
         [
-            new Veiculo(1, "ABC1D23", "Onix", 150m),
+            new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m),
             new Carro(2, "ABC1D23", "Onix", 150m, 4),
             new Patinete(3, "PAT0001", "Xiaomi M365", 30m, 25),
         ];

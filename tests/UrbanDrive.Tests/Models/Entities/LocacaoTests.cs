@@ -9,7 +9,7 @@ public class LocacaoTests
     private static Motorista CriarMotorista() =>
         new("Ana Souza", "12345678909", "12345678900", CategoriaCnh.B, DateOnly.FromDateTime(DateTime.Today.AddYears(2)));
 
-    private static Veiculo CriarHB20() => new(1, "XYZ9K87", "HB20", 140m);
+    private static Veiculo CriarHB20() => new VeiculoDeTeste(1, "XYZ9K87", "HB20", 140m);
 
     [Fact]
     public void Construtor_ComDadosValidos_GuardaMotoristaVeiculoEDias()
@@ -105,7 +105,7 @@ public class LocacaoTests
 
             var motorista = CriarMotorista();
             var frota = new Frota("Centro");
-            var onix = new Veiculo(1, "ABC1D23", "Onix", 150m);
+            var onix = new VeiculoDeTeste(1, "ABC1D23", "Onix", 150m);
             var hb20 = CriarHB20();
             frota.Adicionar(onix);
             frota.Adicionar(hb20);
