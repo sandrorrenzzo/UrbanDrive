@@ -10,25 +10,33 @@ var veiculoService = new VeiculoService();
 var motoristaService = new MotoristaService();
 var locacaoService = new LocacaoService(motoristaService, veiculoService);
 var frotaService = new FrotaService(new Frota("Principal"), veiculoService);
+var relatorioService = new RelatorioService(veiculoService, motoristaService, frotaService, locacaoService);
 
 while (true)
 {
     Console.WriteLine();
     Console.WriteLine("=== UrbanDrive ===");
-    Console.WriteLine("1 - Cadastrar veículo");
-    Console.WriteLine("2 - Listar veículos");
-    Console.WriteLine("3 - Cadastrar motorista");
-    Console.WriteLine("4 - Listar motoristas");
-    Console.WriteLine("5 - Adicionar veículo à frota");
-    Console.WriteLine("6 - Remover veículo da frota");
-    Console.WriteLine("7 - Listar frota");
-    Console.WriteLine("8 - Realizar locação");
-    Console.WriteLine("9 - Listar locações");
-    Console.WriteLine("10 - Ver configurações");
-    Console.WriteLine("11 - Alterar taxa de serviço");
-    Console.WriteLine("12 - Simular aluguel de todos os veículos");
-    Console.WriteLine("13 - Registrar manutenção");
-    Console.WriteLine("0 - Sair");
+    Console.WriteLine("Veículos");
+    Console.WriteLine("  1 - Cadastrar veículo");
+    Console.WriteLine("  2 - Listar veículos");
+    Console.WriteLine("  3 - Simular aluguel de todos os veículos");
+    Console.WriteLine("  4 - Registrar manutenção");
+    Console.WriteLine("  5 - Recarregar veículo elétrico");
+    Console.WriteLine("Motoristas");
+    Console.WriteLine("  6 - Cadastrar motorista");
+    Console.WriteLine("  7 - Listar motoristas");
+    Console.WriteLine("Frota");
+    Console.WriteLine("  8 - Adicionar veículo à frota");
+    Console.WriteLine("  9 - Remover veículo da frota");
+    Console.WriteLine("  10 - Listar frota");
+    Console.WriteLine("Locações");
+    Console.WriteLine("  11 - Realizar locação");
+    Console.WriteLine("  12 - Listar locações");
+    Console.WriteLine("Relatórios e configurações");
+    Console.WriteLine("  13 - Gerar relatórios");
+    Console.WriteLine("  14 - Ver configurações");
+    Console.WriteLine("  15 - Alterar taxa de serviço");
+    Console.WriteLine("  0 - Sair");
     Console.Write("Opção: ");
 
     var opcao = Console.ReadLine();
@@ -42,37 +50,43 @@ while (true)
             ListarVeiculos();
             break;
         case "3":
-            CadastrarMotorista();
-            break;
-        case "4":
-            ListarMotoristas();
-            break;
-        case "5":
-            AdicionarVeiculoNaFrota();
-            break;
-        case "6":
-            RemoverVeiculoDaFrota();
-            break;
-        case "7":
-            ListarFrota();
-            break;
-        case "8":
-            RealizarLocacao();
-            break;
-        case "9":
-            ListarLocacoes();
-            break;
-        case "10":
-            VerConfiguracoes();
-            break;
-        case "11":
-            AlterarTaxa();
-            break;
-        case "12":
             SimularAluguel();
             break;
-        case "13":
+        case "4":
             RegistrarManutencao();
+            break;
+        case "5":
+            RecarregarVeiculo();
+            break;
+        case "6":
+            CadastrarMotorista();
+            break;
+        case "7":
+            ListarMotoristas();
+            break;
+        case "8":
+            AdicionarVeiculoNaFrota();
+            break;
+        case "9":
+            RemoverVeiculoDaFrota();
+            break;
+        case "10":
+            ListarFrota();
+            break;
+        case "11":
+            RealizarLocacao();
+            break;
+        case "12":
+            ListarLocacoes();
+            break;
+        case "13":
+            GerarRelatorios();
+            break;
+        case "14":
+            VerConfiguracoes();
+            break;
+        case "15":
+            AlterarTaxa();
             break;
         case "0":
         case null:
@@ -85,10 +99,10 @@ while (true)
 
 void CadastrarVeiculo()
 {
-    Console.WriteLine("Tipo: 1 - Carro | 2 - Patinete");
+    Console.WriteLine("Tipo: 1 - Carro | 2 - Carro elétrico | 3 - Patinete");
     Console.Write("Escolha o tipo: ");
     var tipo = Console.ReadLine();
-    if (tipo is not ("1" or "2"))
+    if (tipo is not ("1" or "2" or "3"))
     {
         Console.WriteLine("Erro: tipo inválido.");
         return;
@@ -109,16 +123,19 @@ void CadastrarVeiculo()
 
     var portas = 0;
     var autonomia = 0;
-    if (tipo == "1" && !LerInteiro("Quantidade de portas: ", out portas))
+    if (tipo is "1" or "2" && !LerInteiro("Quantidade de portas: ", out portas))
         return;
-    if (tipo == "2" && !LerInteiro("Autonomia da bateria (km): ", out autonomia))
+    if (tipo == "3" && !LerInteiro("Autonomia da bateria (km): ", out autonomia))
         return;
 
     Executar(() =>
     {
-        Veiculo veiculo = tipo == "1"
-            ? veiculoService.CadastrarCarro(placa, modelo, valorDiaria, portas)
-            : veiculoService.CadastrarPatinete(placa, modelo, valorDiaria, autonomia);
+        Veiculo veiculo = tipo switch
+        {
+            "1" => veiculoService.CadastrarCarro(placa, modelo, valorDiaria, portas),
+            "2" => veiculoService.CadastrarCarroEletrico(placa, modelo, valorDiaria, portas),
+            _ => veiculoService.CadastrarPatinete(placa, modelo, valorDiaria, autonomia),
+        };
         Console.WriteLine($"Veículo cadastrado: {veiculo}");
     });
 }
@@ -267,6 +284,28 @@ void RegistrarManutencao()
         foreach (var item in veiculoService.BuscarPorId(id)!.HistoricoManutencoes)
             Console.WriteLine($"  {item}");
     });
+}
+
+void RecarregarVeiculo()
+{
+    if (!LerInteiro("Id do veículo elétrico: ", out var id))
+        return;
+
+    Executar(() =>
+    {
+        var eletrico = veiculoService.Recarregar(id);
+        Console.WriteLine($"Veículo recarregado. Bateria: {eletrico.NivelBateria}%");
+    });
+}
+
+// Cada entidade gera o próprio relatório pelo contrato IImprimivel.
+void GerarRelatorios()
+{
+    foreach (var relatorio in relatorioService.GerarTodos())
+    {
+        Console.WriteLine();
+        Console.WriteLine(relatorio);
+    }
 }
 
 // Lê um número inteiro do console; mostra erro e devolve false se o texto não for um número.
