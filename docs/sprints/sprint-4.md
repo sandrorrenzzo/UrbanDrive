@@ -232,21 +232,118 @@ Seguindo a retrospectiva da Sprint 3, o tempo real de cada tarefa será anotado 
 
 ## G. Resultado da sprint
 
-A preencher ao fim da sprint. Para cada item ou tarefa:
+O tempo real de cada tarefa não foi anotado nesta sprint, apesar de estar previsto na seção D (ver retrospectiva).
 
-- **Item ou tarefa:**
-- **Situação:** (concluído, parcialmente concluído ou não concluído)
-- **Evidência:**
-- **Observações:**
+**T01**
+- **Item ou tarefa:** T01, `Veiculo` abstrata com a propriedade abstrata `Tipo` (PB11)
+- **Situação:** concluído
+- **Evidência:** PR #38, commit `b06811f`
+- **Observações:** o construtor de `Veiculo` passou a ser `protected`, e o `ToString()` passou a mostrar o tipo.
+
+**T02**
+- **Item ou tarefa:** T02, ajuste do código que instanciava `Veiculo` (PB11)
+- **Situação:** concluído
+- **Evidência:** PR #38, commit `119a6b6`
+- **Observações:** refatoração registrada: o `Cadastrar` genérico saiu do `VeiculoService`, a opção "veículo comum" saiu do menu, e os testes da regra comum passaram a usar a classe `VeiculoDeTeste`, que existe só no projeto de testes.
+
+**T03**
+- **Item ou tarefa:** T03, `IImprimivel` e implementações (PB12)
+- **Situação:** concluído
+- **Evidência:** PR #39, commit `e1fda85`
+- **Observações:** o `.editorconfig` foi ajustado para não exigir `public` em membros de interface (commit `ffb7792`).
+
+**T04**
+- **Item ou tarefa:** T04, testes dos relatórios (PB12)
+- **Situação:** concluído
+- **Evidência:** PR #39, commit `d549a16`
+- **Observações:** inclui uma `List<IImprimivel>` com entidades diferentes.
+
+**T05**
+- **Item ou tarefa:** T05, `IEletrico` e `Patinete` elétrico (PB13)
+- **Situação:** concluído
+- **Evidência:** PR #40, commit `8b6b025`
+- **Observações:** foi criada a classe interna `Bateria`, usada por composição, porque `Patinete` e `CarroEletrico` têm classes-base diferentes. Ela não estava prevista no planejamento.
+
+**T06**
+- **Item ou tarefa:** T06, `CarroEletrico : Carro, IEletrico` (PB13)
+- **Situação:** concluído
+- **Evidência:** PR #40, commit `71d7196`
+- **Observações:** nenhuma.
+
+**T07**
+- **Item ou tarefa:** T07, consumo de bateria na locação e testes (PB13)
+- **Situação:** concluído
+- **Evidência:** PR #40, commit `41d227f`
+- **Observações:** 11 testes, incluindo o bloqueio abaixo de 20% e os R$ 585,00 do carro elétrico.
+
+**T08**
+- **Item ou tarefa:** T08, carro elétrico e recarga no `VeiculoService` (PB13, PB14)
+- **Situação:** concluído
+- **Evidência:** PR #41, commit `8ba980f`
+- **Observações:** foi criado também o `RelatorioService`, que junta as entidades como `IImprimivel`. Ele não estava previsto como tarefa separada.
+
+**T09**
+- **Item ou tarefa:** T09, menu final (PB14)
+- **Situação:** concluído
+- **Evidência:** PR #41, commit `2bbc4e9`, `evidencias/sprint-4-execucao-menu.txt`
+- **Observações:** o menu foi reorganizado em seções, o que mudou a numeração das opções.
+
+**T10**
+- **Item ou tarefa:** T10, testes finais e evidências
+- **Situação:** concluído
+- **Evidência:** `docs/sprints/evidencias/sprint-4-testes.txt` e `sprint-4-execucao-menu.txt`
+- **Observações:** 118 testes aprovados, 0 falhas.
+
+**T11**
+- **Item ou tarefa:** T11, diagrama de classes final
+- **Situação:** concluído
+- **Evidência:** `docs/diagramas/classes-final.md`
+- **Observações:** inclui os serviços e a lista de onde cada conceito de POO aparece.
+
+**T12**
+- **Item ou tarefa:** T12, README (PB15)
+- **Situação:** concluído
+- **Evidência:** `README.md`
+- **Observações:** nenhuma.
+
+**T13**
+- **Item ou tarefa:** T13, relatório final (PB15)
+- **Situação:** concluído
+- **Evidência:** `docs/relatorio-final.md`
+- **Observações:** nenhuma.
+
+**T14**
+- **Item ou tarefa:** T14, roteiro de apresentação (PB15)
+- **Situação:** concluído
+- **Evidência:** `docs/roteiro-apresentacao.md`
+- **Observações:** a sequência do roteiro foi executada no programa e produziu os resultados descritos.
+
+**T15**
+- **Item ou tarefa:** T15, revisão da documentação e teste com o repositório clonado (PB15)
+- **Situação:** concluído
+- **Evidência:** este documento
+- **Observações:** o repositório foi clonado em uma pasta limpa e, seguindo só o README, o build terminou com 0 erros, os 118 testes passaram e o exemplo rápido produziu R$ 555,00 e R$ 79,20.
+
+**T16**
+- **Item ou tarefa:** T16, backlog, resultado e retrospectiva
+- **Situação:** concluído
+- **Evidência:** `docs/backlog.md` e este documento
+- **Observações:** todos os 15 itens do backlog estão concluídos.
+
+**Pendências**
+- Nenhuma pendência de requisito. O único ponto não atendido do planejamento é o registro do tempo real das tarefas.
 
 ## H. Retrospectiva
 
-A preencher ao fim da sprint.
-
 **O que funcionou bem?**
+Tratar primeiro a refatoração de `Veiculo` abstrata evitou retrabalho nas interfaces. A combinação de herança, interface e composição resolveu o caso dos veículos elétricos sem duplicar código. Conferir o merge antes de cada tarefa evitou o problema dos PRs abertos da Sprint 3, e a verificação de estilo no build apontou os `using` que ficaram sobrando depois das mudanças.
 
 **Quais foram as principais dificuldades?**
+Decidir onde colocar a lógica de bateria, já que `Patinete` e `CarroEletrico` não têm a mesma classe-base. A transformação de `Veiculo` em abstrata também afetou muitos testes de uma vez, que precisaram ser ajustados.
 
 **O planejamento foi adequado ao esforço necessário?**
+Sim em escopo: as 16 tarefas foram concluídas e todos os itens do backlog foram entregues. Surgiram duas classes não previstas (`Bateria` e `RelatorioService`), registradas na seção G. O tempo real por tarefa não foi anotado, então não dá para comparar com as 9 h estimadas.
 
 **O que deverá ser melhorado na próxima sprint?**
+- Em trabalhos futuros, registrar o tempo real de cada tarefa no próprio quadro do GitHub Projects, com um campo de horas preenchido ao mover a issue para Done. A intenção de anotar à parte não funcionou em nenhuma das quatro sprints.
+- Prever no planejamento as classes de apoio que um requisito pode exigir, como a `Bateria` e o `RelatorioService`.

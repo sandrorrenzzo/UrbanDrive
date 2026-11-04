@@ -112,7 +112,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB08
 - Prioridade: Média
 - Estimativa: 0,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB12: `IImprimivel` com `GerarRelatorio()`**
 - Issue: #12
@@ -120,7 +120,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB04, PB05, PB08
 - Prioridade: Média
 - Estimativa: 1 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB13: `IEletrico` com `Recarregar()` em `Patinete` e `CarroEletrico`**
 - Issue: #13
@@ -128,7 +128,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB08
 - Prioridade: Média
 - Estimativa: 1,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB14: Menu final integrado**
 - Issue: #14
@@ -136,7 +136,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB03 a PB13
 - Prioridade: Alta
 - Estimativa: 1,5 h
-- Situação: A fazer
+- Situação: Concluído
 
 **PB15: README de execução e relatório final**
 - Issue: #15
@@ -144,7 +144,7 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - Depende de: PB14
 - Prioridade: Baixa
 - Estimativa: 2 h
-- Situação: A fazer
+- Situação: Concluído
 
 ## Histórico de alterações
 
@@ -156,3 +156,4 @@ Diagramas, evidências de testes e documentos de cada sprint não são itens sep
 - 03/11/2026: início da Sprint 3. Selecionados PB08, PB09 e PB10. Definidas as regras de aluguel: seguro de R$ 20,00 por dia para carro e 20% de desconto para patinete.
 - 04/11/2026: fim da Sprint 3. PB08, PB09 e PB10 concluídos. A Locacao passou a usar o CalcularAluguel de cada tipo de veículo.
 - 04/11/2026: início da Sprint 4. Selecionados PB11 a PB15. Definidas as regras dos veículos elétricos (bateria, consumo de 10% por dia, bloqueio abaixo de 20%) e o cálculo do CarroEletrico (carro + R$ 10,00 por dia de recarga).
+- 04/11/2026: fim da Sprint 4 e entrega final. PB11 a PB15 concluídos; todos os 15 itens do backlog estão concluídos.
