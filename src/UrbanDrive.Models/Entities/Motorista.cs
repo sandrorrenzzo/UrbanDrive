@@ -1,8 +1,9 @@
 using UrbanDrive.Models.Enums;
+using UrbanDrive.Models.Interfaces;
 
 namespace UrbanDrive.Models.Entities;
 
-public class Motorista
+public class Motorista : IImprimivel
 {
     private string _nome = string.Empty;
     private readonly string _cpf;
@@ -39,6 +40,13 @@ public class Motorista
     public string Cpf => _cpf;
 
     public CNH Cnh => _cnh;
+
+    // A CNH entra no relatório do motorista porque só existe dentro dele (composição).
+    public string GerarRelatorio() => string.Join(Environment.NewLine,
+        "=== Relatório do motorista ===",
+        $"Nome: {Nome}",
+        $"CPF: {Cpf}",
+        $"CNH: {Cnh.Numero} | Categoria {Cnh.Categoria} | Validade {Cnh.Validade:dd/MM/yyyy}");
 
     public override string ToString() => $"{Nome} | CPF {Cpf} | {Cnh}";
 }

@@ -22,6 +22,9 @@ public sealed class Patinete : Veiculo
 
     public override string Tipo => "Patinete";
 
+    public override string GerarRelatorio() =>
+        $"{base.GerarRelatorio()}{Environment.NewLine}Autonomia: {AutonomiaKm} km";
+
     public override string ToString() => $"{base.ToString()} | {AutonomiaKm} km de autonomia";
 
     private static int ValidarAutonomia(int autonomiaKm, int id)
